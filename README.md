@@ -18,3 +18,4 @@ override.tf.json
 
 .terraformrc
 terraform.rc - игнорирует файлы с таким названием 
+hghghghghghghghghg
