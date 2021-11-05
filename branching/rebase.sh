@@ -4,6 +4,7 @@ cat rebase.sh
 count=1
 for param in "$@"; do
 <<<<<<< HEAD
+<<<<<<< HEAD
     echo "\$@ Parameter #$count = $param"
 =======
     echo "Parameter: $param"
@@ -32,4 +33,11 @@ done
 
 
 
+=======
+    echo "Next parameter: $param"
+    count=$(( $count + 1 ))
+done
+
+echo "====="
+>>>>>>> a199fa3 (git-rebase 2)
 
