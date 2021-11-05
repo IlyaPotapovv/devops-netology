@@ -3,12 +3,7 @@ cat rebase.sh
 # display command line options
 count=1
 for param in "$@"; do
-<<<<<<< HEAD
-<<<<<<< HEAD
-    echo "\$@ Parameter #$count = $param"
-=======
-    echo "Parameter: $param"
->>>>>>> dc4688f... git 2.3 rebase @ instead *
+ echo "\$@ Parameter #$count = $param"
     count=$(( $count + 1 ))
 done
 
