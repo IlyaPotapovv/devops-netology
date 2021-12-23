@@ -21,6 +21,14 @@
 
 ### Ваш скрипт:
 ```python
+#!/usr/bin/env python3
+
+import socket as s
+import time as t
+import json
+import yaml
+import datetime as dt
+
 i     = 1
 hold  = 1
 srv   = {'drive.google.com':'1.1.1.1', 'mail.google.com':'1.1.1.1', 'google.com':'1.1.1.1'}
@@ -40,15 +48,18 @@ while True :
         with open('log.json', 'a') as jsf:
           json_data = json.dumps({host:ip})
           jsf.write('\n')
-          jsf.write(str(dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S ")))
-          jsf.write(json_data+'\n')
+          jsf.write(json_data)
         # yaml файл
         with open('log.yaml', 'a') as ymf:
           yaml_data= yaml.dump([{host : ip}])
           ymf.write('\n')
-          ymf.write(str(dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S ")))
           ymf.write(yaml_data)
   srv[host]=ip
+  #print(i) использовал для поиска ошибок
+  i=i+1
+  if i >=2 :
+   break
+  t.sleep(hold)
 ```
 
 ### Вывод скрипта при запуске при тестировании:
