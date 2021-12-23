@@ -47,12 +47,10 @@ while True :
         # json файл
         with open('log.json', 'a') as jsf:
           json_data = json.dumps({host:ip})
-          jsf.write('\n')
           jsf.write(json_data)
         # yaml файл
         with open('log.yaml', 'a') as ymf:
           yaml_data= yaml.dump([{host : ip}])
-          ymf.write('\n')
           ymf.write(yaml_data)
   srv[host]=ip
   #print(i) использовал для поиска ошибок
@@ -71,18 +69,14 @@ while True :
 
 ### json-файл(ы), который(е) записал ваш скрипт:
 ```json
-2021-12-20 13:11:39 {"drive.google.com": "74.125.205.194"}
-
-2021-12-20 13:11:39 {"mail.google.com": "64.233.165.19"}
-
-2021-12-20 13:11:39 {"google.com": "173.194.222.102"}
+{"drive.google.com": "64.233.165.194"}
+{"mail.google.com": "64.233.165.17"}
+{"google.com": "173.194.222.101"}
 ```
 
 ### yml-файл(ы), который(е) записал ваш скрипт:
 ```yaml
 - drive.google.com: 64.233.165.194
-
 - mail.google.com: 64.233.165.17
-
 - google.com: 173.194.222.101
 ```
